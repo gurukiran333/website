@@ -1,518 +1,630 @@
 <!DOCTYPE html>
-<html lang="eng">
+<html lang="en">
 
 <head>
-    <title>SRN Metha school</title>
-    <!-- Meta tag Keywords -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="UTF-8" />
-    <meta name="keywords" content=" SRN Metha school Responsive website, SRN website, SRN Metha school website" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="SRN Metha School, Responsive website, SRN School website">
+    <meta name="description" content="SRN Metha School provides value-based, quality education for life.">
+    <title>SRN Metha School</title>
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <script>
-        addEventListener("load", function () {
-            setTimeout(hideURLbar, 0);
-        }, false);
-
-        function hideURLbar() {
-            window.scrollTo(0, 1);
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() {
+                window.scrollTo(0, 1);
+            }, 0);
+        });
+    </script>
+    <style>
+        /* Chatbot styles */
+        .chatbot-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 50%;
+            padding: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 1000;
         }
 
-    </script>
-    <!-- //Meta tag Keywords -->
-    <!-- Style-CSS -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
-    <!-- /Fonts -->
-    <link href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,600,700"
-        rel="stylesheet">
-    <link href="//fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700" rel="stylesheet">
-    <!-- //Fonts -->
+        .chat-window {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            width: 300px;
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            display: none;
+            flex-direction: column;
+            z-index: 1000;
+        }
+
+        .chat-header {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            font-size: 18px;
+        }
+
+        .chat-body {
+            background-color: white;
+            padding: 10px;
+            height: 300px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chat-message {
+            margin-bottom: 10px;
+        }
+
+        .chat-message.user {
+            align-self: flex-end;
+            background-color: #007bff;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 15px 15px 0 15px;
+        }
+
+        .chat-message.bot {
+            align-self: flex-start;
+            background-color: #f1f1f1;
+            padding: 8px 12px;
+            border-radius: 15px 15px 15px 0;
+        }
+
+        .chat-footer {
+            display: flex;
+            border-top: 1px solid #ddd;
+        }
+
+        .chat-footer input {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 0;
+        }
+
+        .chat-footer button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body>
-    <!-- mian-content -->
+    <!-- Main Content -->
     <div class="main-content" id="home">
-        <div class="layer">
-            <!-- header -->
+        <div class="overlay">
+            <!-- Header -->
             <header>
                 <div class="container-fluid px-lg-5">
-                    <div class="row order-info">
-                        <div class="middle mt-sm-3 col-sm-6 text-left">
+                    <div class="row align-items-center">
+                        <div class="col-md-6 text-left">
                             <ul class="social mb-3">
-                                <li><a href="https://www.facebook.com/SRNMehtaSchool"><span class="fa fa-facebook icon_facebook"></span></a></li>
-                                <li><a href="#"><span class="fa fa-twitter icon_twitter"></span></a></li>
-                                <li><a href="#"><span class="fa fa-google-plus icon_google-plus"></span></a></li>
-                                <li><a href="#"><span class="fa fa-linkedin icon_linkedin"></span></a></li>
+                               <a href="https://www.facebook.com/SRNMehtaSchool" aria-label="Facebook"><span class="fa fa-facebook icon_facebook"></span></a></li>
+                                <a href="#" aria-label="Twitter"><span class="fa fa-twitter icon_twitter"></span></a></li>
+                                <a href="#" aria-label="Google Plus"><span class="fa fa-google-plus icon_google-plus"></span></a></li>
+                                <a href="#" aria-label="LinkedIn"><span class="fa fa-linkedin icon_linkedin"></span></a></li>
                             </ul>
                         </div>
-                        <div class="middle-right mt-sm-3 col-sm-6 text-right">
-                            <h6><span class="fa fa-phone"></span> Enquiry : 021-463423</h6>
+                        <div class="col-md-6 text-right">
+                            <h6><span class="fa fa-phone"></span> Enquiry: 021-463423</h6>
                         </div>
                     </div>
-                    <!-- nav -->
-                    <nav class="pt-4 d-lg-flex">
-                        <div id="logo">
-                            <h1> <a href="index.html">SRN Metha School</a></h1>
+                    <!-- Navigation -->
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light pt-4">
+                        <a class="navbar-brand" href="index.html">SRN Metha School</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+                                <li class="nav-item"><a class="nav-link scroll" href="#about">About</a></li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item scroll" href="#gallery">Gallery</a>
+                                        <a class="dropdown-item scroll" href="#services">Services</a>
+                                        <a class="dropdown-item scroll" href="#facilities">Facilities</a>
+                                        <a class="dropdown-item scroll" href="#curriculum">Curriculum</a>
+                                        <a class="dropdown-item scroll" href="#achievements">Achievements</a>
+                                        <a class="dropdown-item scroll" href="#stats">Stats</a>
+                                        <a class="dropdown-item scroll" href="#team">Team</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item"><a class="nav-link scroll" href="#testimonials">Testimonials</a></li>
+                                <li class="nav-item"><a class="nav-link scroll" href="#contact">Contact</a></li>
+                            </ul>
                         </div>
-                        <label for="drop" class="toggle">Menu</label>
-                        <input type="checkbox" id="drop" />
-                        <ul class="menu mt-2 ml-auto">
-                            <li class="active"><a href="index.html">Home</a></li>
-                            <li><a href="#about" class="scroll">About</a></li>
-                            <li>
-                                <!-- First Tier Drop Down -->
-                                <label for="drop-2" class="toggle">Dropdown <span class="fa fa-angle-down"
-                                        aria-hidden="true"></span> </label>
-                                <a href="#">Dropdown <span class="fa fa-angle-down" aria-hidden="true"></span></a>
-                                <input type="checkbox" id="drop-2" />
-                                <ul class="inner-ul">
-                                    <li><a class="scroll" href="#gallery">Gallery</a></li>
-                                    <li><a href="#services" class="scroll">Services</a></li>
-                                    <li><a href="#stats" class="scroll">Stats</a></li>
-                                    <li><a href="#team" class="scroll">Team</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#testimonials" class="scroll">Testimonials</a></li>
-                            <li><a href="#contact" class="scroll">Contact</a></li>
-                        </ul>
                     </nav>
-                    <!-- //nav -->
+                    <!-- //Navigation -->
                 </div>
             </header>
-            <!-- //header -->
-            <div class="container">
-                <!-- /banner -->
-                <div class="banner-info-layouts text-center">
-                    <h3>Value Based, Quality Education For Life</h3>
-                    <div class="read-more">
-                        <a href="#about" class="read-more scroll">Read More </a>
-                    </div>
-                </div>
+            <!-- //Header -->
 
+            <!-- Banner -->
+            <div class="container">
+                <div class="banner-info text-center">
+                    <h3>Value Based, Quality Education For Life</h3>
+                    <a href="#about" class="btn btn-primary mt-3 scroll">Read More</a>
+                </div>
             </div>
-            <!-- //banner -->
+            <!-- //Banner -->
         </div>
     </div>
-    <!--// mian-content -->
-    <!-- about-->
-    <section class="wthree-row py-5" id="about">
+    <!-- //Main Content -->
+
+    <!-- About Section -->
+    <section class="py-5" id="about">
         <div class="container pt-lg-5">
-            <div class="row about-main">
-                <div class="col-lg-6 about-right">
-                    <img src="images/logo.jpg" class="img-fluid" alt="" />
-                </div>
-                <div class="col-lg-6 about-text-grid text-left">
-                    <div class="title-desc">
-                        <h3 class="main-title-hello text-capitalize">About Us</h3>
-                    </div>
-                    <p class="my-sm-4 mt-2 mb-4">SRN Metha school School consisting of kindergarten, primary, and middle school,High school ,pu college
-
-                        
-                SRN Metha school has the lush football ground , basketball court, batmintation court, volley ball court and etc..
-               The school has all that parents need to ensure qualitative, affordable and morally sound education
-                        for their children. </p>
-                    <a href="#bottom"> Read more</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- //about -->
-
-    <!-- features -->
-    <section class="banner-bottom py-5" id="services">
-        <div class="container py-sm-4">
-            <div class="heading-grid text-center">
-                <h3 class="tittle text-center heading mb-5">Features</h3>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
-                    <div class="row inner-info">
-                        <div class="col-2">
-                            <span class="fa fa-crosshairs"></span>
-                        </div>
-                        <div class="col-10">
-                            <h4 class="mt-md-0 my-2">A clear and shared focus</h4>
-                            <p class="">The focus must always be in learning.
-
-                                The fundamental tool for that is collaboration. </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="row inner-info">
-                        <div class="col-2">
-                            <span class="fa fa-users"></span>
-                        </div>
-                        <div class="col-10">
-                            <h4 class="mt-md-0 my-2">Highly Qualified Teachers</h4>
-                            <p class="">Over 3-10 year of experienced teachers to provide quality education.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
-                    <div class="row inner-info">
-                        <div class="col-2">
-                            <span class="fa fa-cog"></span>
-                        </div>
-                        <div class="col-10">
-                            <h4 class="mt-md-0 my-2">A variety of assessment tools</h4>
-                            <p class="">Project-based learning provides opportunities for students to drive their own learning.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="row inner-info">
-                        <div class="col-2">
-                            <span class="fa fa-envira"></span>
-                        </div>
-                        <div class="col-10">
-                            <h4 class="mt-md-0 my-2">Safe and Secure Environment</h4>
-                            <p class="">SRNM gives you the freedom to carry out your day-to-day activities without fear of political motives or stubborn activism.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-lg-0 mb-5">
-                    <div class="row inner-info">
-                        <div class="col-2">
-                            <span class="fa fa-futbol-o"></span>
-                        </div>
-                        <div class="col-10">
-                            <h4 class="mt-md-0 my-2">Sports & Extracurricular Activities</h4>
-                            <p class="">Since sports help to build character and teach the importance of discipline in life, the school offers extensive sports programs.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="row inner-info">
-                        <div class="col-2">
-                            <span class="fa fa-laptop"></span>
-                        </div>
-                        <div class="col-10">
-                            <h4 class="mt-md-0 my-2">Well Furnished Computer Lab</h4>
-                            <p class="">SRNM has set up advanced and highly technological laboratories for practical classes on Science and Computer.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- //features -->
-    <!-- stats -->
-    <section class="stats py-5" id="stats">
-        <div class="container py-lg-5 py-md-3">
-            <div class="row stat-grids">
-                <div class="col-lg-6 stats-left">
-                    <h3 class="heading mb-4 text-li">Years in the field</h3>
-                    <p class="mb-3"> We have been providing quality education to children for 30 years. Over 10,000 students passed out here.
-                        Well-equipped laboratories, a stable environment, and extra-curricular activities are available throughout the year. </p>
-                </div>
-                <div class="col-lg-6 grid1 stats-right mt-lg-0 mt-4 pl-5">
-                    <div class="row">
-                        <div class="col-sm-4 col-6">
-                            <p class="text-li">Branches</p>
-                            <h4 class="text-wh"> 2</h4>
-                            <span class="fa fa-files-o mr-2"></span>
-                        </div>
-                        <div class="col-sm-4 col-6">
-                            <p>Working Staff</p>
-                            <h4>200+</h4>
-                            <span class="fa fa-tasks mr-2"></span>
-                        </div>
-                        <div class="col-sm-4 col-6 mt-sm-0 mt-5">
-                            <p>Total Students</p>
-                            <h4>4130</h4>
-                            <span class="fa fa-users mr-2"></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- //stats -->
-
-    <!-- Gallery -->
-    <section class="gallery py-5" id="gallery">
-        <div class="container py-md-5">
-            <div class="header text-center">
-                <h3 class="tittle mb-lg-5 mb-3">Our Gallery</h3>
-            </div>
-            <div class="row news-grids text-center gallery-wrap">
-                <div class="col-md-4 gal-img">
-                    <a href="#gal1"><img src="images/g1.jpg" alt="news image" class="img-fluid"></a>
-                </div>
-                <div class="col-md-4 gal-img">
-                    <a href="#gal2"><img src="images/g2.jpg" alt="news image" class="img-fluid"></a>
-                </div>
-                <div class="col-md-4 gal-img">
-                    <a href="#gal3"><img src="images/g3.jpg" alt="news image" class="img-fluid"></a>
-                </div>
-                <div class="col-md-4 gal-img">
-                    <a href="#gal4"><img src="images/g4.jpg" alt="news image" class="img-fluid"></a>
-                </div>
-                <div class="col-md-4 gal-img">
-                    <a href="#gal5"><img src="images/g5.jpg" alt="news image" class="img-fluid"></a>
-                </div>
-                <div class="col-md-4 gal-img">
-                    <a href="#gal6"><img src="images/g6.jpg" alt="news image" class="img-fluid"></a>
-                </div>
-            </div>
-
-            <!-- popup-->
-            <div id="gal1" class="pop-overlay animate">
-                <div class="popup">
-                    <img src="images/g1.jpg" alt="Popup Image" class="img-fluid" />
-
-                    <a class="close" href="#gallery">&times;</a>
-                </div>
-            </div>
-            <!-- //popup -->
-
-            <!-- popup-->
-            <div id="gal2" class="pop-overlay animate">
-                <div class="popup">
-                    <img src="images/g2.jpg" alt="Popup Image" class="img-fluid" />
-
-                    <a class="close" href="#gallery">&times;</a>
-                </div>
-            </div>
-            <!-- //popup -->
-            <!-- popup-->
-            <div id="gal3" class="pop-overlay animate">
-                <div class="popup">
-                    <img src="images/g3.jpg" alt="Popup Image" class="img-fluid" />
-
-                    <a class="close" href="#gallery">&times;</a>
-                </div>
-            </div>
-            <!-- //popup3 -->
-            <!-- popup-->
-            <div id="gal4" class="pop-overlay animate">
-                <div class="popup">
-                    <img src="images/g4.jpg" alt="Popup Image" class="img-fluid" />
-
-                    <a class="close" href="#gallery">&times;</a>
-                </div>
-            </div>
-            <!-- //popup -->
-            <!-- popup-->
-            <div id="gal5" class="pop-overlay animate">
-                <div class="popup">
-                    <img src="images/g5.jpg" alt="Popup Image" class="img-fluid" />
-
-                    <a class="close" href="#gallery">&times;</a>
-                </div>
-            </div>
-            <!-- //popup -->
-            <!-- popup-->
-            <div id="gal6" class="pop-overlay animate">
-                <div class="popup">
-                    <img src="images/g6.jpg" alt="Popup Image" class="img-fluid" />
-
-                    <a class="close" href="#gallery">&times;</a>
-                </div>
-            </div>
-            <!-- //popup -->
-
-        </div>
-    </section>
-    <!--// gallery -->
-    <!-- testimonials -->
-    <section class="testi py-5" id="testimonials">
-        <div class="container pb-xl-5 py-lg-3">
-            <h3 class="tittle two text-center heading mb-5">What our Students say</h3>
             <div class="row">
                 <div class="col-lg-6">
-                    <div class="row testi-cgrid border-right-grid">
-                        <div class="col-sm-4 testi-icon mb-sm-0 mb-3">
-                            <img src="images/te1.jpg" alt="" class="img-fluid" />
-                        </div>
-                        <div class="col-sm-8">
-                            <p class="mx-auto"><span class="fa fa-quote-left"></span> The staff and support are second to none. 
-                                They are polished, proficient, accessible and patient.</p>
-                            <h6 class="b-ltxt mt-3">Aliyas Hasda - <span>Student</span></h6>
-                        </div>
-                    </div>
+                    <img src="images/logo.jpg" class="img-fluid" alt="SRN Metha School Logo">
                 </div>
-                <div class="col-lg-6 mt-lg-0 mt-sm-5 mt-4">
-                    <div class="row testi-cgrid border-left-grid">
-                        <div class="col-sm-4 testi-icon mb-sm-0 mb-3">
-                            <img src="images/te2.jpg" alt="" class="img-fluid" />
-                        </div>
-                        <div class="col-sm-8">
-                            <p class="mx-auto"><span class="fa fa-quote-left"></span> I had an amazing time studying at SRNM, the comfortable study environment, friendly staff and wonderful resources.</p>
-                            <h6 class="b-ltxt mt-3"> Rahul  - <span>Ex-Student</span></h6>
-                        </div>
-                    </div>
+                <div class="col-lg-6">
+                    <h3 class="main-title text-capitalize">About Us</h3>
+                    <p class="mt-4 mb-4">SRN Metha School offers comprehensive education from kindergarten to high school, including PU college. The campus features state-of-the-art sports facilities, ensuring a holistic development environment for students. We strive to provide affordable, qualitative, and morally sound education for every child.</p>
+                    <a href="#bottom" class="btn btn-secondary">Read more</a>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-4">
+                    <h4 class="text-capitalize">Our Mission</h4>
+                    <p class="mt-2">To foster a nurturing environment where students are encouraged to develop academically, socially, and personally. We aim to equip students with the knowledge, skills, and values needed to thrive in a rapidly changing world.</p>
+                </div>
+                <div class="col-lg-4">
+                    <h4 class="text-capitalize">Our Vision</h4>
+                    <p class="mt-2">To be a leading educational institution that prepares students to be lifelong learners, responsible citizens, and leaders in their communities. We envision a future where every student has the opportunity to reach their full potential.</p>
+                </div>
+                <div class="col-lg-4">
+                    <h4 class="text-capitalize">Core Values</h4>
+                    <p class="mt-2">Integrity, Respect, Excellence, Community, and Innovation. These values guide our actions and decisions, ensuring we provide a balanced and inclusive education to all our students.</p>
                 </div>
             </div>
         </div>
     </section>
-    <!-- testimonials -->
-    <section class="section-middle py-5" id="bottom">
-        <div class="container py-lg-5">
-            <div class="row about-main">
-                <div class="col-lg-6 about-text-grid1 text-left">
-                    <div class="title-desc">
-                        <h4><span></span>Get started</h4>
-                        <h3 class="main-title-hello text-capitalize my-4"> Hook up With Us. Together, we can build the best education!</h3>
-                    </div>
+    <!-- //About Section -->
 
-                </div>
-                <div class="col-lg-6 about-right mt-lg-0 mt-4">
-                    <p class="">We are a learning community dedicated to inspiring success and nurturing well-being. Finnish education excellence is at the heart of all we do, 
-                            because we believe that everyone deserves the best possible future.</p>
-                    <p class="mt-4">SRN Metha School is built on experiences and know-how from the English education system in respect of Indian culture students’ 
-                            joy of learning and to encourage teachers’ pedagogical collaboration leading to success.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- contact -->
-    <section class="contact py-5" id="contact">
+    <!-- Features Section -->
+    <section class="banner-bottom py-5" id="services">
         <div class="container py-sm-4">
-            <h3 class="heading mb-4">Contact Us</h3>
-            <div class="row contact-top">
-                <div class="col-lg col-md-6 contact-grid-wthree">
-                    <div class="contact_grid_right">
-                        <form action="#" method="post">
-                            <div class="contact_left_grid">
-                                <div class="con-left">
-                                    <div class="form-group">
-                                        <input class="form-control" type="text" name="Name" placeholder="Name"
-                                            required="">
-                                    </div>
-                                    <div class="form-group">
-                                        <input class="form-control" type="email" name="Email" placeholder="Email"
-                                            required="">
-                                    </div>
-                                    <div class="form-group">
-                                        <textarea id="textarea" placeholder="Message" required=""></textarea>
-                                    </div>
-                                    <div class="sub-honey mx-auto mt-3">
-                                        <button class="form-control btn" type="submit">Submit</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
+            <h3 class="heading text-center mb-5">Features</h3>
+            <div class="row">
+                <!-- Feature Item -->
+                <div class="col-lg-4 col-md-6 mb-5">
+                    <div class="d-flex align-items-start">
+                        <span class="fa fa-crosshairs fa-2x mr-3"></span>
+                        <div>
+                            <h4>A clear and shared focus</h4>
+                            <p>The focus must always be on learning. Collaboration is the fundamental tool for that.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-6 contact-grid-wthree foot-top mt-md-0 mt-5">
-                    <h3 class="contact-title mb-sm-4 mb-2">Address information</h3>
-                    <div class="contact-info">
-                        <p class="mb-4">For more information, please phone or visit the School.</p>
-                        <div class="contact-style-world">
-                            <p><span class="fa fa-map-marker"></span><strong>Location :</strong> kalabuguri,karanataka,India</p>
-                        </div>
-                        <div class="contact-style-world my-2">
-                            <p><span class="fa fa-envelope-open"></span><strong>Email :</strong> 
-                                SRNMethaschool@gmail.com</p>
-                        </div>
-                        <div class="contact-style-world">
-                            <p><span class="fa fa-phone"></span><strong>Phone :</strong> 021-463423</p>
-                            <p><span class="fa fa-mobile"></span><strong>Notice Board Service No. :</strong> 1618021463423</p>
+                <!-- //Feature Item -->
+                <!-- Feature Item -->
+                <div class="col-lg-4 col-md-6 mb-5">
+                    <div class="d-flex align-items-start">
+                        <span class="fa fa-users fa-2x mr-3"></span>
+                        <div>
+                            <h4>Highly Qualified Teachers</h4>
+                            <p>Our teachers have over 3-10 years of experience to provide quality education.</p>
                         </div>
                     </div>
+                </div>
+                <!-- //Feature Item -->
+                <!-- Feature Item -->
+                <div class="col-lg-4 col-md-6 mb-5">
+                    <div class="d-flex align-items-start">
+                        <span class="fa fa-cog fa-2x mr-3"></span>
+                        <div>
+                            <h4>A variety of assessment tools</h4>
+                            <p>Project-based learning provides opportunities for students to drive their own learning.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- //Feature Item -->
+                <!-- Feature Item -->
+                <div class="col-lg-4 col-md-6 mb-5">
+                    <div class="d-flex align-items-start">
+                        <span class="fa fa-envira fa-2x mr-3"></span>
+                        <div>
+                            <h4>Safe and Secure Environment</h4>
+                            <p>SRNM offers a secure environment free from political motives or stubborn activism.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- //Feature Item -->
+                <!-- Feature Item -->
+                <div class="col-lg-4 col-md-6 mb-5">
+                    <div class="d-flex align-items-start">
+                        <span class="fa fa-futbol-o fa-2x mr-3"></span>
+                        <div>
+                            <h4>Sports & Extracurricular Activities</h4>
+                            <p>Extensive sports programs help build character and teach the importance of discipline.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- //Feature Item -->
+                <!-- Feature Item -->
+                <div class="col-lg-4 col-md-6 mb-5">
+                    <div class="d-flex align-items-start">
+                        <span class="fa fa-laptop fa-2x mr-3"></span>
+                        <div>
+                            <h4>Well Furnished Computer Lab</h4>
+                            <p>Our advanced laboratories are equipped for practical Science and Computer classes.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- //Feature Item -->
+            </div>
+        </div>
+    </section>
+    <!-- //Features Section -->
+
+    <!-- Facilities Section -->
+    <section class="py-5 bg-light" id="facilities">
+        <div class="container py-lg-5">
+            <h3 class="heading text-center mb-5">Our Facilities</h3>
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>Library</h4>
+                    <p>Our well-stocked library provides a quiet space for students to study and a diverse collection of books and resources to support their learning and encourage a love for reading.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Laboratories</h4>
+                    <p>We have state-of-the-art science and computer labs that allow students to gain hands-on experience and practical skills, which are crucial for understanding theoretical concepts.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Sports Complex</h4>
+                    <p>Our sports complex includes facilities for various sports, promoting physical fitness and teamwork. Students can participate in sports like football, basketball, cricket, and athletics.</p>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <h4>Art and Music Rooms</h4>
+                    <p>Creative expression is encouraged through our dedicated art and music rooms, where students can explore their talents and develop their artistic and musical skills.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Auditorium</h4>
+                    <p>Our auditorium is a hub for various school events, including assemblies, performances, and guest lectures. It is equipped with modern audio-visual technology.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Cafeteria</h4>
+                    <p>Our cafeteria offers nutritious and balanced meals, ensuring that students have access to healthy food options during their school day.</p>
                 </div>
             </div>
         </div>
     </section>
-    <!-- //contact -->
+    <!-- //Facilities Section -->
 
-    <!-- footer -->
-    <footer class="footer-content">
-        <div class="layer footer-1">
-            <div class="container-fluid">
-                <div class="row footer-top-inner-world">
-                    <div class="col-lg-4 col-md-6 footer-top mt-md-0 mt-sm-5">
-                        <h2>
-                            <a href="index.html">SRN Metha school</a>
-                        </h2>
-                        <p class="my-3">kalabuguri,karanataka,India
+    <!-- Curriculum Section -->
+    <section class="py-5" id="curriculum">
+        <div class="container py-lg-5">
+            <h3 class="heading text-center mb-5">Curriculum</h3>
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>Kindergarten</h4>
+                    <p>Our kindergarten program focuses on the holistic development of children through play-based learning, ensuring a strong foundation in literacy, numeracy, and social skills.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Primary School</h4>
+                    <p>The primary school curriculum emphasizes core subjects such as Mathematics, Science, and English, while also incorporating arts, physical education, and social studies to provide a well-rounded education.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>High School</h4>
+                    <p>Our high school program prepares students for higher education and future careers through a rigorous academic curriculum, including advanced courses in STEM, humanities, and languages.</p>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <h4>PU College</h4>
+                    <p>The PU college offers pre-university courses in various streams, including science, commerce, and arts, designed to equip students with the knowledge and skills needed for university education.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Extracurricular Activities</h4>
+                    <p>We provide a wide range of extracurricular activities, including clubs, sports, and cultural programs, to help students develop their interests and talents outside the classroom.</                </div>
+                <div class="col-md-4">
+                    <h4>Special Programs</h4>
+                    <p>Our special programs include student exchange initiatives, internships, and community service projects that offer students unique learning experiences and opportunities for personal growth.</                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //Curriculum Section -->
 
-                            Mail: SRNMethaschool@gmail.com 
-                            Phone No.: 021-463423</p>
-                        <p>
-                            Our aim is to provide innovative and enjoyable education, early intervention for pupils, 
-                            enabling them to become independent, happy, positive and valuable members of society.
-                        </p>
-                    </div>
-                    <div class="col-lg-4 col-md-6 mt-md-0 mt-5">
-                        <div class="footer-hello">
-                            <h3 class="mb-3 hello_title">Office Hours</h3>
-                            <hr>
-                            <ul class="list-info-hello last-world-contact mt-lg-4">
-                                <li>
-                                    <p> Sunday - Thursday 9.00 am - 5.00 pm</p>
+    <!-- Achievements Section -->
+    <section class="py-5 bg-light" id="achievements">
+        <div class="container py-lg-5">
+            <h3 class="heading text-center mb-5">Our Achievements</h3>
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>Academic Excellence</h4>
+                    <p>Our students consistently achieve high marks in national and international examinations, demonstrating the effectiveness of our rigorous academic programs.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Sports Championships</h4>
+                    <p>SRN Metha School has won numerous sports championships at district, state, and national levels, reflecting our strong emphasis on physical education and athletics.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Community Engagement</h4>
+                    <p>Our students actively participate in community service projects, contributing to the well-being of society and developing a sense of social responsibility.</p>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <h4>Innovative Projects</h4>
+                    <p>We encourage students to engage in innovative projects and research, some of which have gained recognition at science fairs and exhibitions.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Cultural Activities</h4>
+                    <p>Our school is renowned for its cultural activities, with students showcasing their talents in music, dance, drama, and art at various platforms.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Alumni Success</h4>
+                    <p>Our alumni have gone on to excel in diverse fields, including academia, industry, and public service, reflecting the strong foundation they received at SRN Metha School.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //Achievements Section -->
 
-                                </li>
-                                <li class="my-2">
-                                    <p>Friday 9.00 am - 2.00 pm</p>
-
-                                </li>
-                                <li class="my-2">
-                                    <p>Saturday Office will be Closed</p>
-
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 mt-lg-0 mt-5">
-                        <div class="footer-hello">
-                            <h3 class="mb-3 hello_title">Newsletter</h3>
-                            <hr>
-
-                            <div class="footer-text">
-                                <p>By subscribing to our mailing list you will always get latest news and updates from
-                                    us.</p>
-                                <form action="#" method="post">
-                                    <input type="email" name="Email" placeholder="Enter your email..." required="">
-                                    <button class="btn1 btn"><span class="fa fa-paper-plane-o"
-                                            aria-hidden="true"></span></button>
-                                    <div class="clearfix"> </div>
-                                </form>
-                            </div>
-                        </div>
-
-
+    <!-- Stats Section -->
+    <section class="stats bg-light py-5" id="stats">
+        <div class="container text-center">
+            <div class="row">
+                <!-- Stat Item -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="counter">
+                        <span class="fa fa-school fa-2x"></span>
+                        <h4 class="counter-value">20</h4>
+                        <p>Years of Experience</p>
                     </div>
                 </div>
-
+                <!-- //Stat Item -->
+                <!-- Stat Item -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="counter">
+                        <span class="fa fa-user-graduate fa-2x"></span>
+                        <h4 class="counter-value">50</h4>
+                        <p>Qualified Teachers</p>
+                    </div>
+                </div>
+                <!-- //Stat Item -->
+                <!-- Stat Item -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="counter">
+                        <span class="fa fa-book-open fa-2x"></span>
+                        <h4 class="counter-value">1000+</h4>
+                        <p>Students</p>
+                    </div>
+                </div>
+                <!-- //Stat Item -->
             </div>
-
-            <p class="copy-right-grids text-li text-center my-sm-4 my-4">© 2024 SRN SRN Metha school. All Rights Reserved | Design
-                by
-                <a href="https://www.facebook.com/SRNMehtaSchooL.399041/">SRNMehtaSchool</a>
-            </p>
-            <div class="world-footer text-center mt-4">
-                <ul class="list-unstyled world-icons">
-                    <li>
-                        <a href="https://www.facebook.com/SRNMehtaSchool">
-                            <span class="fa fa-facebook-f"></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="fa fa-twitter"></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="fa fa-vk"></span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="move-top text-right"><a href="#home" class="move-top"> <span class="fa fa-angle-up  mb-3"
-                        aria-hidden="true"></span></a></div>
         </div>
-        <!-- //footer bottom -->
+    </section>
+    <!-- //Stats Section -->
+
+    <!-- Team Section -->
+    <section class="py-5" id="team">
+        <div class="container py-lg-5">
+            <h3 class="heading text-center mb-5">Our Teachers</h3>
+            <div class="row text-center">
+                <!-- Team Member -->
+                <div class="col-md-3 col-6 mb-5">
+                    <img src="images/team1.jpg" class="img-fluid rounded-circle mb-3" alt="Teacher 1">
+                    <h4>Mr. JaiShree</h4>
+                    <span>Mentor</span>
+                </div>
+                <!-- //Team Member -->
+                <!-- Team Member -->
+                <div class="col-md-3 col-6 mb-5">
+                    <img src="images/team2.jpg" class="img-fluid rounded-circle mb-3" alt="Teacher 2">
+                    <h4>Mrs. Divya</h4>
+                    <span>Teacher</span>
+                </div>
+                <!-- //Team Member -->
+                <!-- Team Member -->
+                <div class="col-md-3 col-6 mb-5">
+                    <img src="images/team3.jpg" class="img-fluid rounded-circle mb-3" alt="Teacher 3">
+                    <h4>Mrs. Priya</h4>
+                    <span>Teacher</span>
+                </div>
+                <!-- //Team Member -->
+                <!-- Team Member -->
+                <div class="col-md-3 col-6 mb-5">
+                    <img src="images/team4.jpg" class="img-fluid rounded-circle mb-3" alt="Teacher 4">
+                    <h4>Mrs. Priyanka</h4>
+                    <span>Teacher</span>
+                </div>
+                <!-- //Team Member -->
+            </div>
+        </div>
+    </section>
+    <!-- //Team Section -->
+
+    <!-- Testimonials Section -->
+    <section class="bg-light py-5" id="testimonials">
+        <div class="container py-lg-5">
+            <h3 class="heading text-center mb-5">Testimonials</h3>
+            <div class="row text-center">
+                <!-- Testimonial Item -->
+                <div class="col-md-4 mb-5">
+                    <div class="testimonial">
+                        <p>My school journey was amazing. The teachers are well-qualified and the infrastructure is excellent.</p>
+                        <img src="images/t1.jpg" class="img-fluid rounded-circle mb-3" alt="Testimonial 1">
+                        <h4>John Doe</h4>
+                        <span>Alumni</span>
+                    </div>
+                </div>
+                <!-- //Testimonial Item -->
+                <!-- Testimonial Item -->
+                <div class="col-md-4 mb-5">
+                    <div class="testimonial">
+                        <p>SRN Metha School provides a safe and secure environment for students. My child loves it here.</p>
+                        <img src="images/t2.jpg" class="img-fluid rounded-circle mb-3" alt="Testimonial 2">
+                        <h4>Jane Smith</h4>
+                        <span>Parent</span>
+                    </div>
+                </div>
+                <!-- //Testimonial Item -->
+                <!-- Testimonial Item -->
+                <div class="col-md-4 mb-5">
+                    <div class="testimonial">
+                        <p>The extracurricular activities here are exceptional. They help students develop holistically.</p>
+                        <img src="images/t3.jpg" class="img-fluid rounded-circle mb-3" alt="Testimonial 3">
+                        <h4>Mary Johnson</h4>
+                        <span>Parent</span>
+                    </div>
+                </div>
+                <!-- //Testimonial Item -->
+            </div>
+        </div>
+    </section>
+    <!-- //Testimonials Section -->
+
+    <!-- Contact Section -->
+    <section class="py-5" id="contact">
+        <div class="container py-lg-5">
+            <h3 class="heading text-center mb-5">Contact Us</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Address</h4>
+                    <p>University Road, Opposite Syphon, Karachi, Pakistan.</p>
+                    <h4>Email</h4>
+                    <p><a href="mailto:info@srnmathaschool.edu.pk">info@srnmathaschool.edu.pk</a></p>
+                    <h4>Phone</h4>
+                    <p>021-463423</p>
+                </div>
+                <div class="col-md-6">
+                    <form action="mailto:info@srnmathaschool.edu.pk" method="post" enctype="text/plain">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //Contact Section -->
+
+    <!-- Chatbot Icon and Window -->
+    <div class="chatbot-icon" id="chatbotIcon">
+        <i class="fa fa-comment"></i>
+    </div>
+    <div class="chat-window" id="chatWindow">
+        <div class="chat-header">
+            SRN Metha School Chat
+        </div>
+        <div class="chat-body" id="chatBody">
+            <!-- Chat messages will appear here -->
+        </div>
+        <div class="chat-footer">
+            <input type="text" id="userInput" placeholder="Type a message...">
+            <button id="sendBtn">Send</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2024 SRN Metha School. All rights reserved.</p>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="https://www.facebook.com/SRNMehtaSchool" class="text-white" aria-label="Facebook"><span class="fa fa-facebook"></span></a></li>
+                <li class="list-inline-item"><a href="#" class="text-white" aria-label="Twitter"><span class="fa fa-twitter"></span></a></li>
+                <li class="list-inline-item"><a href="#" class="text-white" aria-label="Google Plus"><span class="fa fa-google-plus"></span></a></li>
+                <li class="list-inline-item"><a href="#" class="text-white" aria-label="LinkedIn"><span class="fa fa-linkedin"></span></a></li>
+            </ul>
         </div>
     </footer>
-    <!-- //footer -->
+    <!-- //Footer -->
 
+    <script>
+        // Chatbot functionality
+        const chatbotIcon = document.getElementById('chatbotIcon');
+        const chatWindow = document.getElementById('chatWindow');
+        const chatBody = document.getElementById('chatBody');
+        const userInput = document.getElementById('userInput');
+        const sendBtn = document.getElementById('sendBtn');
 
+        chatbotIcon.addEventListener('click', () => {
+            chatWindow.style.display = chatWindow.style.display === 'none' || chatWindow.style.display === '' ? 'flex' : 'none';
+        });
+
+        sendBtn.addEventListener('click', () => {
+            const message = userInput.value;
+            if (message.trim() !== '') {
+                appendMessage('user', message);
+                userInput.value = '';
+                setTimeout(() => {
+                    respondToMessage(message);
+                }, 1000);
+            }
+        });
+
+        userInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendBtn.click();
+            }
+        });
+
+        function appendMessage(sender, message) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `chat-message ${sender}`;
+            messageDiv.textContent = message;
+            chatBody.appendChild(messageDiv);
+            chatBody.scrollTop = chatBody.scrollHeight;
+        }
+
+        function respondToMessage(message) {
+            let response = '';
+            if (message.toLowerCase().includes('hello')) {
+                response = 'Hello! How can I assist you today?';
+            } else if (message.toLowerCase().includes('admission')) {
+                response = 'For admission inquiries, please visit our admissions page or contact us at info@srnmathaschool.edu.pk';
+            } else if (message.toLowerCase().includes('fees')) {
+                response = 'Our fee structure varies for different classes. Please contact us at info@srnmathaschool.edu.pk for detailed information.';
+            } else if (message.toLowerCase().includes('curriculum')) {
+                response = 'Our curriculum covers kindergarten to high school, focusing on holistic development through various subjects and extracurricular activities.';
+            } else if (message.toLowerCase().includes('facilities')) {
+                response = 'Our facilities include a well-stocked library, state-of-the-art laboratories, sports complex, art and music rooms, and a modern auditorium.';
+            } else if (message.toLowerCase().includes('achievements')) {
+                response = 'SRN Metha School is proud of its achievements in academics, sports, community engagement, and cultural activities, with many awards and recognitions.';
+            } else {
+                response = 'I am here to help! Please ask any questions you may have about SRN Metha School.';
+            }
+            appendMessage('bot', response);
+        }
+    </script>
 </body>
 
 </html>
